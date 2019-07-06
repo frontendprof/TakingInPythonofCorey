@@ -68,3 +68,16 @@ def my_range(start,end):
 nums_2=my_range(15,25)
 for numb in nums_2:
     print(numb)
+    
+    
+    
+ # we have machine breaker here too with generators:
+def my_range(start):
+    current=start
+    while True:
+        yield current
+        current+=1
+
+nums_2=my_range(2)
+for numb in nums_2:
+    print(numb)
